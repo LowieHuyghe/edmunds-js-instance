@@ -1,0 +1,42 @@
+{
+  "name": "edmunds-instance",
+  "version": "0.0.1",
+  "description": "Instance for Edmunds",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc",
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch",
+    "lint": "tslint -c tslint.json --exclude '**/*.d.ts' --exclude 'node_modules/**/*.ts' '**/*.ts'",
+    "test": "mocha -r ts-node/register **/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/LowieHuyghe/edmunds-js-instance.git"
+  },
+  "keywords": [
+    "edmunds",
+    "javascript"
+  ],
+  "author": "Lowie Huyghe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/LowieHuyghe/edmunds-js-instance/issues"
+  },
+  "homepage": "https://gitlab.com/LowieHuyghe/edmunds-js-instance#README",
+  "dependencies": {
+    "edmunds": "file:../edmunds-js"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.10",
+    "@types/express": "^4.11.0",
+    "@types/mocha": "^2.2.45",
+    "@types/node": "^8.5.2",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.8.0",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.6.2"
+  }
+}
