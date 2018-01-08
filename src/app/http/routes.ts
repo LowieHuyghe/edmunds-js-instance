@@ -1,10 +1,10 @@
-import { Application } from 'edmunds'
+import { Edmunds } from 'edmunds'
 import { HomeController } from './controllers/homecontroller'
 
 /**
  * Add the routes
- * @param {Application} app
+ * @param {Edmunds} edmunds
  */
-export function route (app: Application) {
-  app.express.use('/', HomeController.route('getIndex'))
+export function route (edmunds: Edmunds) {
+  edmunds.app.use('/', HomeController.func('getIndex'))
 }

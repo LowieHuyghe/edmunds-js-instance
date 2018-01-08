@@ -1,11 +1,11 @@
-import { Application } from 'edmunds'
+import { Edmunds } from '../../../edmunds-js/dist/index'
 import { route } from '../app/http/routes'
 
-export function bootstrap (): Application {
-  const app = new Application()
+export function bootstrap (): Edmunds {
+  const edmunds = new Edmunds()
 
   // Add the routes
-  route(app)
+  route(edmunds)
 
-  return app
+  return edmunds
 }

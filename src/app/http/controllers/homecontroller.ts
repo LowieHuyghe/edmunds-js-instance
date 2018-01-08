@@ -1,18 +1,16 @@
 import { Controller } from 'edmunds'
-import {
-  Request,
-  Response
-} from 'express'
+import { NextFunction } from 'express'
 
 export class HomeController extends Controller {
   /**
    * Get Index
-   * @param {Request} req
-   * @param {Response} res
+   * @param {object} params
+   * @param {NextFunction} next
    */
-  getIndex (req: Request, res: Response) {
-    res.json({
-      message: 'Hello World!'
+  getIndex (params: object, next: NextFunction) {
+    this.response.json({
+      message: 'Hello World!',
+      app: this.edmunds.config.get('app.name')
     })
   }
 }
