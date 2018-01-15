@@ -4,11 +4,14 @@
   "description": "Instance for Edmunds",
   "main": "dist/index.js",
   "scripts": {
-    "start": "tsc",
+    "start": "nodemon --ext ts --exec \"tsc && node dist/index.js\"",
     "tsc": "tsc",
+    "tsc:clean": "rm -rf dist && tsc",
     "tsc:watch": "tsc --watch",
     "lint": "tslint -c tslint.json --exclude '**/*.d.ts' --exclude 'node_modules/**/*.ts' '**/*.ts'",
-    "test": "mocha -r ts-node/register **/*.spec.ts"
+    "lint:watch": "nodemon --ext ts --exec npm run lint",
+    "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive --exit '**/*.spec.ts'",
+    "test:watch": "nodemon --ext ts --exec npm test"
   },
   "repository": {
     "type": "git",
@@ -25,7 +28,7 @@
   },
   "homepage": "https://gitlab.com/LowieHuyghe/edmunds-js-instance#README",
   "dependencies": {
-    "edmunds": "file:../edmunds-js"
+    "edmunds": "^0.0.2"
   },
   "devDependencies": {
     "@types/chai": "^4.0.10",
@@ -34,6 +37,8 @@
     "@types/node": "^8.5.2",
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
+    "nyc": "^11.4.1",
+    "source-map-support": "^0.5.0",
     "ts-node": "^4.1.0",
     "tslint": "^5.8.0",
     "tslint-config-standard": "^7.0.0",
