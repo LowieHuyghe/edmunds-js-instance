@@ -1,5 +1,20 @@
 {
   "app": {
     "name": "Edmunds Instance"
+  },
+  "logging": {
+    "enabled": true,
+    "instances": [
+      {
+        "name": "console",
+        "driver": "Console"
+      },
+      {
+        "name": "file",
+        "driver": "File",
+        "filename": "./storage/logs/error-log.txt",
+        "level": "error"
+      }
+    ]
   }
 }

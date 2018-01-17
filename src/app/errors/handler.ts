@@ -10,8 +10,17 @@ export class Handler extends ErrorMiddleware {
    */
   handle (err: Error, next: NextFunction): void {
     if (this.edmunds.logger) {
+      // Log the exception
       this.edmunds.logger.error('', err)
+      // Send response
+      this.response
+        .status(500)
+        .json({
+          success: false
+        })
+    } else {
+      // Default handler
+      next(err)
     }
-    next(err)
   }
 }

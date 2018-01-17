@@ -6,5 +6,5 @@ import { HomeController } from './controllers/homecontroller'
  * @param {Edmunds} edmunds
  */
 export function route (edmunds: Edmunds) {
-  edmunds.app.use('/', HomeController.func('getIndex'))
+  edmunds.app.get('/', HomeController.func('getIndex'))
 }
