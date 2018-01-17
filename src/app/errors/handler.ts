@@ -12,6 +12,8 @@ export class Handler extends ErrorMiddleware {
     // Log the exception
     if (this.edmunds.logger) {
       this.edmunds.logger.error('', err)
+    } else {
+      console.error(err)
     }
 
     if (this.response.headersSent) {
