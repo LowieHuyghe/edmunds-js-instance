@@ -9,18 +9,23 @@ export class Handler extends ErrorMiddleware {
    * @returns {void}
    */
   handle (err: Error, next: NextFunction): void {
+    // Log the exception
     if (this.edmunds.logger) {
-      // Log the exception
       this.edmunds.logger.error('', err)
-      // Send response
+    }
+
+    if (this.response.headersSent) {
+      // Default handler when headers already sent.
+      // Express will close the connection and fails the request.
+      next(err)
+    } else {
+      // Show error response
       this.response
         .status(500)
         .json({
-          success: false
+          success: false,
+          error: 'Internal Server Error'
         })
-    } else {
-      // Default handler
-      next(err)
     }
   }
 }
