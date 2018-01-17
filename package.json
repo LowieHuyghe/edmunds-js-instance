@@ -4,7 +4,7 @@
   "description": "Instance for Edmunds",
   "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon --ext ts --exec \"tsc && DEBUG=express:* node dist/index.js\"",
+    "start": "nodemon --ext ts --exec \"tsc && NODE_ENV=development DEBUG=express:* node dist/index.js\"",
     "tsc": "tsc",
     "tsc:clean": "rm -rf dist && tsc",
     "tsc:watch": "tsc --watch",
