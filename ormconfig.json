@@ -1,0 +1,11 @@
+[
+	{
+		"name": "default",
+		"type": "sqljs",
+		"entities": ["dist/app/database/entity/*.js"],
+		"migrations": ["dist/app/database/migration/*.js"],
+		"cli": {
+			"migrationsDir": "migration"
+		}
+	}
+]

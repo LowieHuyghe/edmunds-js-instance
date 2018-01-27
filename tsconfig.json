@@ -6,7 +6,12 @@
 		"removeComments": true,
 		"preserveConstEnums": true,
 		"sourceMap": true,
-		"allowSyntheticDefaultImports": true
+		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"experimentalDecorators": true,
+		"lib" : [
+			"es2015"
+		]
 	},
 	"files": [
 		"./node_modules/@types/mocha/index.d.ts",

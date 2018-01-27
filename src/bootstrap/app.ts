@@ -7,11 +7,11 @@ import { Handler } from '../app/errors/handler'
 import * as errorHandler from 'errorhandler'
 import * as bodyParser from 'body-parser'
 
-export function bootstrap (): Edmunds {
+export async function bootstrap (): Promise<Edmunds> {
   const edmunds = new Edmunds()
 
   // Service Providers
-  edmunds.register(LoggingServiceProvider)
+  await edmunds.register(LoggingServiceProvider)
 
   // Body parser
   edmunds.app.use(bodyParser.json())

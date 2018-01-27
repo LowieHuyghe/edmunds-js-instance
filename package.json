@@ -4,14 +4,23 @@
   "description": "Instance for Edmunds",
   "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon --ext ts --exec \"tsc && NODE_ENV=development DEBUG=express:* node dist/index.js\"",
-    "tsc": "tsc",
-    "tsc:clean": "rm -rf dist && tsc",
-    "tsc:watch": "tsc --watch",
+    "start": "nodemon --watch src --ext ts --exec \"npm run tsc && npm run server:dev\"",
+    "server:dev": "NODE_ENV=development DEBUG=express:* node dist/index.js",
+    "server:stag": "NODE_ENV=staging DEBUG=express:* node dist/index.js",
+    "server:prod": "NODE_ENV=production DEBUG=express:* node dist/index.js",
+
+    "db:migrations:run": "npm run tsc && typeorm migrations:run",
+    "db:migrations:revert": "npm run tsc && typeorm migrations:revert",
+
+    "tsc": "rm -rf dist && tsc",
+    "tsc:watch": "rm -rf dist && tsc --watch",
+
     "lint": "tslint -c tslint.json --exclude '**/*.d.ts' --exclude 'node_modules/**/*.ts' '**/*.ts'",
     "lint:watch": "nodemon --ext ts --exec npm run lint",
-    "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive --exit '**/*.spec.ts'",
-    "test:watch": "nodemon --ext ts --exec npm test"
+
+    "test": "NODE_ENV=testing mocha --opts mocha.opts '**/*.spec.ts'",
+    "test:cover": "NODE_ENV=testing nyc mocha --opts mocha.opts '**/*.spec.ts'",
+    "test:watch": "NODE_ENV=testing mocha --watch --opts mocha.opts '**/*.spec.ts'"
   },
   "repository": {
     "type": "git",
@@ -29,8 +38,10 @@
   "homepage": "https://gitlab.com/LowieHuyghe/edmunds-js-instance#README",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "edmunds": "^0.0.2",
-    "errorhandler": "^1.5.0"
+    "edmunds": "^0.0.3",
+    "errorhandler": "^1.5.0",
+    "sql.js": "^0.5.0",
+    "typeorm": "^0.1.11"
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.8",
