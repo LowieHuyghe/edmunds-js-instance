@@ -1,17 +1,20 @@
 import {
   Edmunds,
-  LoggingServiceProvider
+  LoggingServiceProvider,
+  DatabaseServiceProvider
 } from 'edmunds'
 import { route } from '../app/http/routes'
 import { Handler } from '../app/errors/handler'
 import * as errorHandler from 'errorhandler'
 import * as bodyParser from 'body-parser'
+import * as appRootPath from 'app-root-path'
 
 export async function bootstrap (): Promise<Edmunds> {
-  const edmunds = new Edmunds()
+  const edmunds = new Edmunds(appRootPath.path)
 
   // Service Providers
   await edmunds.register(LoggingServiceProvider)
+  await edmunds.register(DatabaseServiceProvider)
 
   // Body parser
   edmunds.app.use(bodyParser.json())

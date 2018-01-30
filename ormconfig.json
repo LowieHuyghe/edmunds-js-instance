@@ -1,11 +1,20 @@
 [
-	{
-		"name": "default",
-		"type": "sqljs",
-		"entities": ["dist/app/database/entity/*.js"],
-		"migrations": ["dist/app/database/migration/*.js"],
-		"cli": {
-			"migrationsDir": "migration"
-		}
-	}
+  {
+    "name": "default",
+    "type": "sqljs",
+    "entities": [
+      "src/app/database/entity/**/*.ts"
+    ],
+    "migrations": [
+      "src/app/database/migration/**/*.ts"
+    ],
+    "subscribers": [
+      "src/app/database/subscriber/**/*.ts"
+    ],
+    "cli": {
+      "entitiesDir": "src/app/database/entity",
+      "migrationsDir": "src/app/database/migration",
+      "subscribersDir": "src/app/database/subscriber"
+    }
+  }
 ]

@@ -1,15 +1,16 @@
 import { bootstrap } from './bootstrap/app'
+import { Kernel } from './app/console/kernel'
 
 (async (): Promise<void> => {
 
   const edmunds = await bootstrap()
+  const kernel = new Kernel(edmunds)
 
-  edmunds.app.listen(3000, (err: Error) => {
-    if (err) {
-      return console.error(err)
-    }
-    return console.log(`Running on http://localhost:3000`)
-  })
+  try {
+    await kernel.run()
+  } catch (e) {
+    console.error(e)
+  }
 
 })()
   .then(() => {

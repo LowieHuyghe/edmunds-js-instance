@@ -12,7 +12,7 @@ export class MyEntity1517059332080 implements MigrationInterface {
   async up (queryRunner: QueryRunner): Promise<any> {
     await queryRunner.query(`
       CREATE TABLE my_entity (
-        id     INT           NOT NULL PRIMARY KEY,
+        id     INTEGER       PRIMARY KEY AUTOINCREMENT,
         title  VARCHAR(255)  NOT NULL,
         text   VARCHAR(500)  NOT NULL
       )
