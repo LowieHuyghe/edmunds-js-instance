@@ -55,7 +55,7 @@
     "faker": "^4.1.0",
     "mocha": "^5.1.1",
     "nodemon": "^1.17.4",
-    "nyc": "^11.4.1",
+    "nyc": "^11.7.1",
     "source-map-support": "^0.5.5",
     "tslint": "^5.8.0",
     "tslint-config-standard": "^7.0.0",
