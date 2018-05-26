@@ -2,8 +2,18 @@
   "app": {
     "name": "Edmunds Instance"
   },
+
+  "filesystem": {
+    "instances": [
+      {
+        "name": "local",
+        "driver": "local",
+        "path": "./storage/files"
+      }
+    ]
+  },
+
   "logging": {
-    "enabled": true,
     "instances": [
       {
         "name": "console",
@@ -14,6 +24,15 @@
         "driver": "File",
         "filename": "./storage/logs/error-log.txt",
         "level": "error"
+      }
+    ]
+  },
+
+  "cache": {
+    "instances": [
+      {
+        "name": "memcached",
+        "driver": "memcached"
       }
     ]
   }
