@@ -1,7 +1,9 @@
 import {
   Edmunds,
+  FileSystemServiceProvider,
   LoggingServiceProvider,
-  DatabaseServiceProvider
+  DatabaseServiceProvider,
+  CacheServiceProvider
 } from 'edmunds'
 import { route } from '../app/http/routes'
 import { Handler } from '../app/errors/handler'
@@ -13,8 +15,10 @@ export async function bootstrap (): Promise<Edmunds> {
   const edmunds = new Edmunds(appRootPath.path)
 
   // Service Providers
+  await edmunds.register(FileSystemServiceProvider)
   await edmunds.register(LoggingServiceProvider)
   await edmunds.register(DatabaseServiceProvider)
+  await edmunds.register(CacheServiceProvider)
 
   // Body parser
   edmunds.app.use(bodyParser.json())
