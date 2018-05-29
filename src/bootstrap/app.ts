@@ -6,7 +6,7 @@ import {
   CacheServiceProvider
 } from 'edmunds'
 import { route } from '../app/http/routes'
-import { Handler } from '../app/errors/handler'
+import Handler from '../app/errors/handler'
 import * as errorHandler from 'errorhandler'
 import * as bodyParser from 'body-parser'
 import * as appRootPath from 'app-root-path'

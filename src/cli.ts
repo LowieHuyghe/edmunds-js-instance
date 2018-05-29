@@ -1,5 +1,5 @@
 import { bootstrap } from './bootstrap/app'
-import { Kernel } from './app/console/kernel'
+import Kernel from './app/console/kernel'
 
 (async (): Promise<void> => {
 

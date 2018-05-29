@@ -1,8 +1,8 @@
 import { Seeder } from 'edmunds'
-import { MyEntity } from '../entity/myentity'
+import MyEntity from '../entity/myentity'
 import * as faker from 'faker'
 
-export class MyEntitySeeder extends Seeder {
+export default class MyEntitySeeder extends Seeder {
   /**
    * Call the seeder
    * @returns {Promise<void>}

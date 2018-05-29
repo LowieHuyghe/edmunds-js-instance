@@ -1,7 +1,7 @@
 import { ErrorMiddleware } from 'edmunds'
 import { NextFunction } from 'express'
 
-export class Handler extends ErrorMiddleware {
+export default class Handler extends ErrorMiddleware {
   /**
    * Handle the error
    * @param {Error} err The error

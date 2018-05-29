@@ -3,7 +3,7 @@ import {
   QueryRunner
 } from 'typeorm'
 
-export class MyEntity1517059332080 implements MigrationInterface {
+export default class MyEntity1517059332080 implements MigrationInterface {
   /**
    * Up the migration
    * @param {QueryRunner} queryRunner

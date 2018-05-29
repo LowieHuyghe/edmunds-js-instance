@@ -5,7 +5,7 @@ import {
 } from 'typeorm'
 
 @EventSubscriber()
-export class AllSubscriber implements EntitySubscriberInterface {
+export default class AllSubscriber implements EntitySubscriberInterface {
   /**
    * Called after entity is inserted to the database.
    */

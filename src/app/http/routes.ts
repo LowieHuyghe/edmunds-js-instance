@@ -1,5 +1,5 @@
 import { Edmunds } from 'edmunds'
-import { HomeController } from './controllers/homecontroller'
+import HomeController from './controllers/homecontroller'
 
 /**
  * Add the routes

@@ -4,10 +4,10 @@ import {
   Command
 } from 'edmunds'
 import * as commander from 'commander'
-import { SeedCommand } from '../database/seedcommand'
-import { HelloWorldCommand } from './command/helloworldcommand'
+import SeedCommand from '../database/seedcommand'
+import HelloWorldCommand from './command/helloworldcommand'
 
-export class Kernel extends EdmundsKernel {
+export default class Kernel extends EdmundsKernel {
   /**
    * Get commands
    */

@@ -1,7 +1,7 @@
 import { Controller } from 'edmunds'
 import { NextFunction } from 'express'
 
-export class HomeController extends Controller {
+export default class HomeController extends Controller {
   /**
    * Get Index
    * @param {any} params

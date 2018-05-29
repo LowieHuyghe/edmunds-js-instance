@@ -3,10 +3,10 @@ import {
   EntitySubscriberInterface,
   InsertEvent
 } from 'typeorm'
-import { MyEntity } from '../entity/myentity'
+import MyEntity from '../entity/myentity'
 
 @EventSubscriber()
-export class MyEntitySubscriber implements EntitySubscriberInterface<MyEntity> {
+export default class MyEntitySubscriber implements EntitySubscriberInterface<MyEntity> {
   /**
    * Returns the class of the entity to which events will listen.
    * If this method is omitted, then subscriber will listen to events of all entities.

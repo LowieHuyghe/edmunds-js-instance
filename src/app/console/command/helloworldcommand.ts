@@ -5,7 +5,7 @@ import {
   Seeder
 } from 'edmunds'
 
-export class HelloWorldCommand extends Command {
+export default class HelloWorldCommand extends Command {
   /**
    * Register the command
    * @param {commander.Command} program

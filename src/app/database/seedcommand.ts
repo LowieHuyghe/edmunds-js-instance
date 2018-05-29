@@ -3,9 +3,9 @@ import {
   Seeder,
   SeedCommand as EdmundsSeedCommand
 } from 'edmunds'
-import { MyEntitySeeder } from './seeder/myentityseeder'
+import MyEntitySeeder from './seeder/myentityseeder'
 
-export class SeedCommand extends EdmundsSeedCommand {
+export default class SeedCommand extends EdmundsSeedCommand {
   /**
    * Get seeders
    */
