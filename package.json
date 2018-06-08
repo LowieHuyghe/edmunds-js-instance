@@ -28,7 +28,7 @@
     "@godaddy/terminus": "^2.2.0",
     "app-root-path": "^2.0.1",
     "body-parser": "^1.18.3",
-    "edmunds": "^0.2.1",
+    "edmunds": "^0.3.0",
     "errorhandler": "^1.5.0",
     "winston": "^2.4.2"
   },
