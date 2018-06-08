@@ -1,6 +1,7 @@
 import { Seeder } from 'edmunds'
 import MyEntity from '../entity/myentity'
 import * as faker from 'faker'
+import { Connection } from 'typeorm'
 
 export default class MyEntitySeeder extends Seeder {
   /**
@@ -19,7 +20,7 @@ export default class MyEntitySeeder extends Seeder {
       entities.push(entity)
     }
 
-    const connection = this.edmunds.database()
+    const connection: Connection = await this.edmunds.database()
     // const repository = connection.getRepository(MyEntity)
 
     console.log(`  Saving ${count} MyEntity's`)

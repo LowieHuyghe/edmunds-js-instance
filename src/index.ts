@@ -12,7 +12,7 @@ import * as terminus from '@godaddy/terminus'
 
     terminus(server, {
       onSignal: edmunds.exit.bind(edmunds),
-      logger: edmunds.logger
+      logger: edmunds.logger as any
     })
 
     await new Promise((resolve, reject) => {
