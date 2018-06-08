@@ -8,14 +8,10 @@ import Kernel from './app/console/kernel'
 
   try {
     await kernel.run()
-  } catch (e) {
-    console.error(e)
+  } catch (err) {
+    edmunds.logger.error(err)
+  } finally {
+    await edmunds.exit()
   }
 
-})()
-  .then(() => {
-    //
-  })
-  .catch((reason: any) => {
-    console.error(reason)
-  })
+})().catch(console.error)

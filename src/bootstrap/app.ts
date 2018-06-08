@@ -1,7 +1,7 @@
 import {
   Edmunds,
-  FileSystemServiceProvider,
   LoggingServiceProvider,
+  FileSystemServiceProvider,
   DatabaseServiceProvider,
   CacheServiceProvider
 } from 'edmunds'
@@ -15,10 +15,10 @@ export async function bootstrap (): Promise<Edmunds> {
   const edmunds = new Edmunds(appRootPath.path)
 
   // Service Providers
-  await edmunds.register(FileSystemServiceProvider)
   await edmunds.register(LoggingServiceProvider)
-  await edmunds.register(DatabaseServiceProvider)
-  await edmunds.register(CacheServiceProvider)
+  // await edmunds.register(FileSystemServiceProvider)
+  // await edmunds.register(DatabaseServiceProvider)
+  // await edmunds.register(CacheServiceProvider)
 
   // Body parser
   edmunds.app.use(bodyParser.json())
