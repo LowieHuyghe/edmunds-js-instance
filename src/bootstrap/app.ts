@@ -8,7 +8,6 @@ import {
 import { route } from '../app/http/routes'
 import Handler from '../app/errors/handler'
 import * as errorHandler from 'errorhandler'
-import * as bodyParser from 'body-parser'
 import * as appRootPath from 'app-root-path'
 
 export async function bootstrap (): Promise<Edmunds> {
@@ -22,9 +21,6 @@ export async function bootstrap (): Promise<Edmunds> {
   // await edmunds.register(FileSystemServiceProvider)
   // await edmunds.register(DatabaseServiceProvider)
   // await edmunds.register(CacheServiceProvider)
-
-  // Body parser
-  edmunds.app.use(bodyParser.json())
 
   // Add the routes
   route(edmunds)
