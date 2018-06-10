@@ -14,6 +14,9 @@ import * as appRootPath from 'app-root-path'
 export async function bootstrap (): Promise<Edmunds> {
   const edmunds = new Edmunds(appRootPath.path)
 
+  // Template engine
+  edmunds.app.set('view engine', 'pug')
+
   // Service Providers
   await edmunds.register(LoggingServiceProvider)
   // await edmunds.register(FileSystemServiceProvider)

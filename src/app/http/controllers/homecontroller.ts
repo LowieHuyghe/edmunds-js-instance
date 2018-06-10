@@ -8,9 +8,17 @@ export default class HomeController extends Controller {
    * @param {NextFunction} next
    */
   getIndex (params: any, next: NextFunction) {
-    this.response.json({
-      message: 'Hello World!',
-      app: this.edmunds.config.get('app.name')
-    })
+    // respond with html page
+    if (this.request.accepts('html')) {
+      this.response.render('home', { message: 'Hello World!' })
+
+      // respond with json
+    } else if (this.request.accepts('json')) {
+      this.response.send({ message: 'Hello World!' })
+
+      // default to plain-text
+    } else {
+      this.response.type('txt').send('Hello World!')
+    }
   }
 }

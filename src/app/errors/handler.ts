@@ -1,5 +1,6 @@
 import { ErrorMiddleware } from 'edmunds'
 import { NextFunction } from 'express'
+import ErrorController from '../http/controllers/errorcontroller'
 
 export default class Handler extends ErrorMiddleware {
   /**
@@ -14,13 +15,8 @@ export default class Handler extends ErrorMiddleware {
       // Express will close the connection and fails the request.
       next(err)
     } else {
-      // Show error response
-      this.response
-        .status(500)
-        .json({
-          success: false,
-          error: 'Internal Server Error'
-        })
+      const controller = new ErrorController(this.request, this.response)
+      controller.getError({ error: err }, next)
     }
 
     // Log the exception
