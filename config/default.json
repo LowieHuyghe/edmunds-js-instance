@@ -16,8 +16,8 @@
   "logging": {
     "instances": [
       {
-        "name": "console",
-        "driver": "Console"
+        "name": "rawconsole",
+        "driver": "RawConsole"
       },
       {
         "name": "file",
