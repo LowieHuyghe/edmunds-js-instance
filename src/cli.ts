@@ -9,7 +9,11 @@ import Kernel from './app/console/kernel'
   try {
     await kernel.run()
   } catch (err) {
-    edmunds.logger.error(err)
+    if (edmunds.logger) {
+      edmunds.logger.error(err)
+    } else {
+      console.error(err)
+    }
   } finally {
     await edmunds.exit()
   }

@@ -12,16 +12,24 @@ import * as terminus from '@godaddy/terminus'
 
     terminus(server, {
       onSignal: edmunds.exit.bind(edmunds),
-      logger: edmunds.logger as any
+      logger: (edmunds.logger || console) as any
     })
 
     await new Promise((resolve, reject) => {
       server.listen(port, (err: Error) => err ? reject(err) : resolve())
     })
 
-    edmunds.logger.info(`Running on http://localhost:${port}`)
+    if (edmunds.logger) {
+      edmunds.logger.info(`Running on http://localhost:${port}`)
+    } else {
+      console.info(`Running on http://localhost:${port}`)
+    }
   } catch (err) {
-    edmunds.logger.error(err)
+    if (edmunds.logger) {
+      edmunds.logger.error(err)
+    } else {
+      console.error(err)
+    }
   }
 
 })().catch(console.error)
