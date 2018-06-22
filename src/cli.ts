@@ -3,7 +3,7 @@ import Kernel from './app/console/kernel'
 
 (async (): Promise<void> => {
 
-  const edmunds = await bootstrap()
+  const edmunds = bootstrap()
   const kernel = new Kernel(edmunds)
 
   try {

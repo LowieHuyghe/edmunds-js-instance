@@ -5,7 +5,7 @@ import * as terminus from '@godaddy/terminus'
 (async (): Promise<void> => {
 
   const port = process.env.NODE_PORT || 3000
-  const edmunds = await bootstrap()
+  const edmunds = bootstrap()
 
   try {
     const server = http.createServer(edmunds.app)
