@@ -31,7 +31,8 @@
     "errorhandler": "^1.5.0",
     "pug": "^2.0.3",
     "typeorm": "^0.2.7",
-    "winston": "^3.0.0"
+    "winston": "^3.0.0",
+    "winston-transport": "^4.2.0"
   },
   "devDependencies": {
     "@types/app-root-path": "^1.2.4",
