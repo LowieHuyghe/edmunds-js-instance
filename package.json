@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@godaddy/terminus": "^2.3.0",
-    "app-root-path": "^2.0.1",
+    "app-root-path": "^2.1.0",
     "edmunds": "^0.4.0",
     "errorhandler": "^1.5.0",
     "pug": "^2.0.3",
