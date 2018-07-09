@@ -25,7 +25,7 @@
     "test:watch": "NODE_ENV=testing mocha --watch --opts mocha.opts $NODE_DEBUG_OPTION '**/*.spec.ts'"
   },
   "dependencies": {
-    "@godaddy/terminus": "^2.3.0",
+    "@godaddy/terminus": "^2.4.0",
     "app-root-path": "^2.0.1",
     "edmunds": "^0.4.0",
     "errorhandler": "^1.5.0",
