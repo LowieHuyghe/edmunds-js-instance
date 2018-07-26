@@ -1,7 +1,4 @@
 {
-  "name": "edmunds-instance",
-  "version": "0.0.1",
-  "description": "Instance for Edmunds",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
