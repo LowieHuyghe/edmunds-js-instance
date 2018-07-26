@@ -34,10 +34,6 @@ main() {
     printf "${YELLOW}Tar is not installed!${NORMAL} Please install tar first!\n"
     exit 1
   fi
-  if ! command -v npm >/dev/null 2>&1; then
-    printf "${YELLOW}Npm is not installed!${NORMAL} Please install npm first!\n"
-    exit 1
-  fi
 
   printf "${YELLOW}What will be the name of the app?${NORMAL}\n"
   read APP_NAME
