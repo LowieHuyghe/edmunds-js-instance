@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/edmundsjs/framework/master/docs/logo.jpg "Edmunds Logo")
+[![Edmunds Logo](https://raw.githubusercontent.com/edmundsjs/framework/master/docs/logo.jpg)](https://edmundsjs.com/)
 
 Edmunds is an Express based framework for building web applications
 with a firm structure to start from. Edmunds takes away the pain of
