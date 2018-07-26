@@ -8,7 +8,8 @@ matter.
 
 ## Getting Started
 
-Create your new project by running the following command in your terminal.
+Create your new project by running the following command in your
+terminal.
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/edmundsjs/edmunds/master/create-edmunds-app.sh)"
