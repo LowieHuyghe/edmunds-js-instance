@@ -7,11 +7,10 @@ import {
 } from 'edmunds'
 import { route } from '../app/http/routes'
 import Handler from '../app/errors/handler'
-import * as errorHandler from 'errorhandler'
-import * as appRootPath from 'app-root-path'
+import * as path from 'path'
 
 export function bootstrap (): Edmunds {
-  const edmunds = new Edmunds(appRootPath.path)
+  const edmunds = new Edmunds(path.resolve(__dirname, '..', '..'))
 
   // Template engine
   edmunds.app.set('view engine', 'pug')
@@ -26,9 +25,6 @@ export function bootstrap (): Edmunds {
   route(edmunds)
 
   // Error handling
-  if (edmunds.isDevelopment()) {
-    edmunds.app.use(errorHandler())
-  }
   edmunds.app.use(Handler.func())
 
   return edmunds
