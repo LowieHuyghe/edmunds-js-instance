@@ -17,5 +17,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/edmundsjs/edmunds/master/c
 
 ## Documentation
 
-Take a look at the documentation on [https://edmundsjs.com/](https://edmundsjs.com/)
-to get the hang of it.
+Take a look at [the documentation](https://edmundsjs.com/) to get the
+hang of it.
