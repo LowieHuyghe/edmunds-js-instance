@@ -28,29 +28,6 @@
     ]
   },
 
-  "database": {
-    "instances": [
-      {
-        "name": "sqljs",
-        "type": "sqljs",
-        "entities": [
-          "src/app/database/entity/**/*.ts"
-        ],
-        "migrations": [
-          "src/app/database/migration/**/*.ts"
-        ],
-        "subscribers": [
-          "src/app/database/subscriber/**/*.ts"
-        ],
-        "cli": {
-          "entitiesDir": "src/app/database/entity",
-          "migrationsDir": "src/app/database/migration",
-          "subscribersDir": "src/app/database/subscriber"
-        }
-      }
-    ]
-  },
-
   "cache": {
     "instances": [
       {
