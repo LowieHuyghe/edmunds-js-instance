@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@godaddy/terminus": "^2.4.1",
-    "edmunds": "^0.5.0",
+    "edmunds": "^0.6.0",
     "pug": "^2.0.3",
     "typeorm": "^0.2.9",
     "winston": "^3.1.0",
