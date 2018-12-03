@@ -22,7 +22,7 @@
     "test:watch": "NODE_ENV=testing mocha --watch --opts mocha.opts $NODE_DEBUG_OPTION 'src/**/*.spec.ts'"
   },
   "dependencies": {
-    "@godaddy/terminus": "^2.4.1",
+    "@godaddy/terminus": "^4.1.0",
     "edmunds": "^0.6.0",
     "pug": "^2.0.3",
     "typeorm": "^0.2.9",
