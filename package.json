@@ -36,7 +36,7 @@
     "@types/faker": "^4.1.4",
     "@types/joi": "^14.0.0",
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.11",
+    "@types/node": "^10.12.14",
     "chai": "^4.2.0",
     "faker": "^4.1.0",
     "mocha": "^5.2.0",
