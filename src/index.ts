@@ -1,6 +1,6 @@
 import { bootstrap } from './bootstrap/app'
 import * as http from 'http'
-import * as terminus from '@godaddy/terminus'
+import { createTerminus } from '@godaddy/terminus'
 
 (async (): Promise<void> => {
 
@@ -10,7 +10,7 @@ import * as terminus from '@godaddy/terminus'
   try {
     const server = http.createServer(edmunds.app)
 
-    terminus(server, {
+    createTerminus(server, {
       onSignal: edmunds.exit.bind(edmunds),
       logger: (edmunds.logger || console) as any
     })

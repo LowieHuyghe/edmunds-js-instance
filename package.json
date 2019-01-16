@@ -22,30 +22,30 @@
     "test:watch": "NODE_ENV=testing mocha --watch --opts mocha.opts $NODE_DEBUG_OPTION 'src/**/*.spec.ts'"
   },
   "dependencies": {
-    "@godaddy/terminus": "^2.4.1",
-    "edmunds": "^0.6.0",
+    "@godaddy/terminus": "^4.1.0",
+    "edmunds": "^0.7.0",
     "pug": "^2.0.3",
-    "typeorm": "^0.2.9",
+    "typeorm": "^0.2.11",
     "winston": "^3.1.0",
-    "winston-transport": "^4.2.0"
+    "winston-transport": "^4.3.0"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/config": "^0.0.34",
     "@types/express": "^4.16.0",
     "@types/faker": "^4.1.4",
-    "@types/joi": "^14.0.0",
+    "@types/joi": "^14.0.1",
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.12.11",
+    "@types/node": "^10.12.18",
     "chai": "^4.2.0",
     "faker": "^4.1.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.7",
+    "nodemon": "^1.18.9",
     "nyc": "^13.1.0",
-    "source-map-support": "^0.5.9",
+    "source-map-support": "^0.5.10",
     "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
+    "tslint": "^5.12.1",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.2.1"
+    "typescript": "^3.2.2"
   }
 }
