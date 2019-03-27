@@ -25,7 +25,7 @@
     "@godaddy/terminus": "^4.1.0",
     "edmunds": "^0.7.1",
     "pug": "^2.0.3",
-    "typeorm": "^0.2.11",
+    "typeorm": "^0.2.16",
     "winston": "^3.1.0",
     "winston-transport": "^4.3.0"
   },
